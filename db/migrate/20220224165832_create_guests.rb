@@ -4,7 +4,7 @@ class CreateGuests < ActiveRecord::Migration[6.1]
       t.string :title
       t.string :first_name
       t.string :last_name
-      t.reference :household
+      t.references :household, index: true, foreign_key: true
       t.boolean :attending
       t.string :meal
       t.string :notes
